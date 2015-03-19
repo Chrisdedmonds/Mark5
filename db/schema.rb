@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319211749) do
+ActiveRecord::Schema.define(version: 20150319223334) do
+
+  create_table "certifications", force: true do |t|
+    t.string   "name"
+    t.string   "year"
+    t.integer  "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", force: true do |t|
     t.string   "name"
