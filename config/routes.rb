@@ -1,4 +1,10 @@
 Mark5::Application.routes.draw do
+  #get "companies/index"
+  #get "companies/show"
+  #get "companies/new"
+  #get "companies/edit"
+  #get "companies/delete"
+  resources :companies
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
