@@ -5,6 +5,7 @@ class CertificationsController < ApplicationController
   end
 
   def show
+    @certification = Certification.find(params[:id])
   end
 
   def new
