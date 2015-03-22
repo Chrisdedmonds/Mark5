@@ -1,5 +1,12 @@
 Mark5::Application.routes.draw do
   resources :certifications
+  
+
+  get "/companies/:id" => "companies#show", as: 'company'
+  resources :companies
+
+  root 'companies#index'
+
   #get "certifications/index"
   #get "certifications/show"
   #get "certifications/new"
@@ -10,8 +17,6 @@ Mark5::Application.routes.draw do
   #get "companies/new"
   #get "companies/edit"
   #get "companies/delete"
-  resources :companies
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

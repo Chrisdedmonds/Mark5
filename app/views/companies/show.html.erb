@@ -4,3 +4,11 @@
 <p>
 	<strong><%= @company.name %></strong>
 </p>
+
+<table>
+	<% @company.certifications.each do |certification| %>
+	<tr>
+		<td><%= link_to(certification.name, certification) %></td>
+	</tr>
+	<% end %>
+</table>

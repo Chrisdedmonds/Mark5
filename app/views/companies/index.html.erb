@@ -6,7 +6,8 @@
 <% @companies.each do |company| %>
 	<tr>
 		<td><%= company.name %></td>
-	</tr><br/>
+	</tr>
+	<div><%= link_to'View Certifications', company %></div><br/>
 <% end %>
 </div>
 
