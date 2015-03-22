@@ -9,6 +9,16 @@ class CertificationsController < ApplicationController
   end
 
   def new
+    @certification = Certification.new
+  end
+
+  def create
+    @certification = Certification.new(certification_params)
+    if @certification.save
+      redirect_to(:action => 'index')
+    else
+      render('new')
+    end
   end
 
   def edit
@@ -20,6 +30,6 @@ class CertificationsController < ApplicationController
 private
 
   def certification_params
-    params_require(:certification).permit(:name, :year)
+    params.require(:certification).permit(:name, :year)
   end
 end
