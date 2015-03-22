@@ -41,3 +41,6 @@ healthcare_it= Certification.create(name: 'CompTIA Healthcare IT Technician', ye
 mobility = Certification.create(name: 'CompTIA Mobility+', year: '2003', company_id: comptia.id)
 security = Certification.create(name: 'CompTIA Security+', year: '2005', company_id: comptia.id)
 storage = Certification.create(name: 'CompTIA Storage+', year: '2003', company_id: comptia.id)
+
+User.where(name: 'Admin').first_or_create!(password_digest: BCrypt::Password.create('password'), admin: true, password: 'password', password_confirmation: 'password')
+User.where(name: 'Chris').first_or_create!(password_digest: BCrypt::Password.create('password'), admin: false, password: 'password', password_confirmation: 'password')
