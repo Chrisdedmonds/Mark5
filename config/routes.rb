@@ -2,7 +2,7 @@ Mark5::Application.routes.draw do
   resources :certifications
   
 
-  get "/companies/:id" => "companies#show", as: 'company'
+  
   resources :companies
 
   root 'companies#index'
