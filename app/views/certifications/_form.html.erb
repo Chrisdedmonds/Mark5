@@ -1,1 +1,19 @@
 <%= form_for(@certification) do |f| %>
+
+<table>
+	<tr>
+		<td><%= f.label :company %></td>
+		<td><%= f.collection_select :company_id, Company.all, :id, :name, prompt: true %></td>
+	</tr>
+	<tr>
+		<td><%= f.label :certification %></td>
+		<td><%= f.collection_select :certification_id, Certification.all, :id, :name, prompt: true %></td>
+	</tr>
+	<tr>
+		<td><%= f.label :year %></td>
+		<td><%= f.date_select :year %></td>
+	</tr>	
+	<tr>
+		<td><%= f.submit %></td>
+	</tr>
+</table>
